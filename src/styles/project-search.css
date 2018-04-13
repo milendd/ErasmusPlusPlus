@@ -1,0 +1,51 @@
+.content{
+	background-color: orange;
+}
+
+.content-header{
+	display: block;
+}
+
+.project-type{
+	display: inline;
+	font-weight: bold;
+	font-size: 19px;
+}
+
+.dates-of-project{
+	display: inline;
+	font-size: 14px;
+}
+
+.dates-of-project:after{
+	content: ' | ';
+}
+
+.location{
+	display: inline;
+	font-size: 14px;
+}
+
+.content-left{
+	display: inline-block;
+	float: left;
+	width: 60%;
+}
+
+.content-right{
+	display: inline-block;
+	float:right;
+	width: 40%;
+}
+
+.content-right > button{
+	width: 100%;
+}
+
+.link-to-project{
+	margin: 0 0 10px 0;
+}
+
+.participating-countries-tag{
+	font-size: 12px;
+}
