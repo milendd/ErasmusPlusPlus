@@ -2,3 +2,15 @@ body {
 	background-color: rgb(246, 246, 246);
 	color: rgb(128, 128, 128);
 }
+
+.custom-theme {
+	background-color: #4181D1;
+}
+
+nav .btn-link {
+	color: white;
+}
+
+nav .btn-link:hover {
+	color: black;
+}
