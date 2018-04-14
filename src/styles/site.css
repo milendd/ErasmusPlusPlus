@@ -52,6 +52,18 @@ div.empty {
 	height: 100px;
 }
 
+.navbar-brand{
+	font-weight: bold;
+	font-size: 25px;
+	color: #EEE !important;
+}
+
+.nav-link{
+	font-weight: bold;
+	font-size: 18px;
+	color: #EEE !important;
+}
+
 .central-section{
 	margin: 0 10%;
 	background-color: #E9E7E8;

@@ -1,0 +1,15 @@
+.location:after{
+	content: none;
+}
+
+.location{
+	display: inline;
+	font-weight: bold;
+	font-size: 19px;
+}
+
+.content-type{	
+	display: inline;
+	font-size: 14px;
+	font-weight: normal;
+}
