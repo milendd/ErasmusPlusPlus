@@ -9,16 +9,14 @@
 				
 				'<div class="collapse navbar-collapse" id="navbarSupportedContent">' +
 					'<ul class="navbar-nav mr-auto">' +
-						'<li class="nav-item">' +
-							'<a class="nav-link" href="project_search.html">Search project</a>' +
-						'</li>' +
 						'<li class="nav-item dropdown">' +
 							'<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">' +
-								'Dropdown' +
+								'Search' +
 							'</a>' +
 							'<div class="dropdown-menu custom-theme" aria-labelledby="navbarDropdown">' +
-								'<a class="dropdown-item" href="#">Action</a>' +
-								'<a class="dropdown-item" href="#">Another action</a>' +
+								'<a class="dropdown-item" href="organization_search.html">By organization</a>' +
+								'<a class="dropdown-item" href="host_search.html">By host</a>' +
+								'<a class="dropdown-item" href="project_search.html">By project</a>' +
 							'</div>' +
 						'</li>' +
 					'</ul>' +
