@@ -1,5 +1,11 @@
+.sidebar .option{
+	font-size: 15px;
+}
+
 .content{
-	background-color: orange;
+	background-color: #E9E7E8;
+	border-radius: 12px;
+	padding: 5px 10px;
 }
 
 .content-header{
@@ -29,12 +35,12 @@
 .content-left{
 	display: inline-block;
 	float: left;
-	width: 60%;
+	width: 50%;
 }
 
 .content-right{
 	display: inline-block;
-	float:right;
+	float: right;
 	width: 40%;
 }
 
