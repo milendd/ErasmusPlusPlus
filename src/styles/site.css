@@ -1,4 +1,4 @@
-button, .login-button, .register-button {
+button, .button, .login-button, .register-button {
 	display: inline-block;
 	background-color: #4181D1;
 	border: none;
@@ -10,7 +10,10 @@ button, .login-button, .register-button {
 	margin: 4px 2px;
 }
 
-button:hover{
+button:hover,
+ .button:hover, 
+ .login-button:hover,
+.register-button:hover {
 	background: #003399;
 	color: #FFF;
 }
