@@ -24,7 +24,7 @@
 					'</ul>' +
 					
 					'<form class="form-inline my-2 my-lg-0">' +
-						'<a href="register_person.html" class="btn btn-md btn-link">Регистрация</a>' +
+						'<a href="register.html" class="btn btn-md btn-link">Регистрация</a>' +
 					'</form>' +
 				'</div>' +
 			'</div>' +
