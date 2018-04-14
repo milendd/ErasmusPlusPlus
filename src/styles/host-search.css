@@ -1,0 +1,14 @@
+.fee:after{
+	content:' | ';
+}
+
+.capacity{
+	display: inline;
+	font-size: 14px;
+	font-weight: normal;
+}
+
+.additional-info-entry{
+	display: box;
+	margin-bottom: 1em;
+}

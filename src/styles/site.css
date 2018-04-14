@@ -23,6 +23,15 @@ body {
 	font-family: sans-serif;
 }
 
+a.navbar-brand{
+	padding: 5px;
+}
+
+.custom-theme .container{
+	margin:0 10%;
+	padding: 0px;
+}
+
 .page-title{
 	display: block;
 	margin: 8%;
