@@ -23,7 +23,7 @@ body {
 	font-family: sans-serif;
 }
 
-.container{
+.custom-theme .container{
 	margin:0 10%;
 	padding: 0px;
 }
@@ -31,7 +31,6 @@ body {
 .page-title{
 	display: block;
 	margin: 8%;
-	width:100%;
 	font-size: 72px;
 	text-align: center;
 	color: white;
