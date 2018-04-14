@@ -24,6 +24,7 @@ body {
 	background-image: url("../images/background.png");
 	background-attachment: fixed;
 	font-family: sans-serif;
+	margin-bottom: 10%;
 }
 
 a.navbar-brand{
@@ -133,6 +134,11 @@ div.empty {
 	background: #003399;
 	color: #FFF;
 }
+
+/*.option + .option,
+.card-body{
+	margin-top:3px;
+}*/
 
 .card-body{
 	display: block;
