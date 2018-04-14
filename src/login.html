@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Login - Erasmus++</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="scripts/bootstrap/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="styles/site.css">
+		<link rel="stylesheet" href="styles/register.css">
+	</head>
+	<body>
+		<div id="nav"></div>
+
+		<div class="container">
+			<div class="empty"></div>
+		
+			<div class="row register-page">
+				<div class="col-md-10 register-detail" id="register-organization">
+					<h4>login</h3>
+					
+					<form action="index.html" class="form-horizontal" method="post" role="form" id="LoginForm">
+						<hr/>
+						<div class="form-group">
+							<label class="col-md-4 control-label" for="Email">Email</label>
+							<div class="col-md-8">
+								<input class="form-control" id="Email" name="Email" type="text" required="required" />
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-md-4 control-label" for="Password">Password</label>
+							<div class="col-md-8">
+								<input class="form-control" id="Password" name="Password" type="password" required="required" />
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-md-offset-2 col-md-10">
+								<input type="submit" value="Login" class="btn btn-default" id="SubmitBtn" />
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		
+		<script src="scripts/jquery/jquery-3.2.1.slim.min.js"></script>
+		<script src="scripts/bootstrap/js/bootstrap.min.js"></script>
+		<script src="scripts/common.js"></script>
+		
+		<script>
+			$(function() {
+				$('#SubmitBtn').click(function (e){
+					var data = $('#LoginForm').serializeArray();
+					var obj = {};
+					for (var i = 0; i < data.length; i++) {
+						obj[data[i].name] = data[i].value;
+					}
+					
+					// Just for the prototype
+					sessionStorage.setItem("user", obj.Email);
+				});
+			});
+		</script>
+	</body>
+</html>

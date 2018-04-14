@@ -49,13 +49,11 @@ a.navbar-brand{
 	padding: 0.5rem 0px;
 }
 
-.login-button, 
 .register-button {
 	background-color: white;
 	color: #4181D1;
 }
 
-.login-button:hover, 
 .register-button:hover {
 	background-color: #003399;
 	color: #FFF;
@@ -67,6 +65,10 @@ a.navbar-brand{
 
 #nav nav .btn-link:hover {
 	color: black;
+}
+
+#nav .greating {
+	margin-right: 5px;
 }
 
 a.open-nav {

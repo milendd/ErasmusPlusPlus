@@ -1,4 +1,16 @@
-(function () {
+(function () {	
+	var userTemplate = 
+		'<a href="login.html" class="register-button">Login</a>' +
+		'<a href="register.html" class="register-button btn">Register</a>';
+
+	var user = sessionStorage.getItem("user");
+	if (user) {
+		userTemplate = 
+			'<span class="greating">Здравейте <b>' + user +'</b></span>' +
+			'<a href="profile.html" class="register-button btn">Profile</a>' +
+			'<a href="index.html" class="register-button btn" id="LogoutBtn">Logout</a>';
+	}
+	
 	var navTemplate = 
 		'<nav class="navbar navbar-expand-lg navbar-light custom-theme">' +
 			'<div class="container">' +
@@ -20,14 +32,14 @@
 							'</div>' +
 						'</li>' +
 					'</ul>' +
-					
-					'<form class="form-inline my-2 my-lg-0">' +
-						'<a href="login.html" class="login-button">Login</a>' +
-						'<a href="register.html" class="login-button btn">Register</a>' +
-					'</form>' +
+					userTemplate
 				'</div>' +
 			'</div>' +
 		'</nav>';
 	
 	$('#nav').append(navTemplate);
+	
+	$('#LogoutBtn').click(function() {
+		sessionStorage.removeItem('user');	
+	});
 }());
