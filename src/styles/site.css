@@ -87,11 +87,14 @@ nav .btn-link:hover {
 }
 
 .content{
+	display: block;
+	overflow: hidden;
 	margin: 0 0 20px;
 }
 
 .content h2{
 	color: #4181D1;
+	font-weight: bold;
 }
 
 .description{
