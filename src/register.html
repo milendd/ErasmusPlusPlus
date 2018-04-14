@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Регистрация на физическо лице - Erasmus++</title>
+		<title>Registration - Erasmus++</title>
 		<meta charset="utf-8" />
+		<link rel="stylesheet" href="scripts/bootstrap/css/bootstrap-datepicker.min.css" />
 		<link rel="stylesheet" href="scripts/bootstrap/css/bootstrap.min.css" />
 		<link rel="stylesheet" href="styles/site.css">
 		<link rel="stylesheet" href="styles/register.css">
+		<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous"> -->
+		<link rel="stylesheet" href="scripts/font-awesome/css/font-awesome.min.css">
 	</head>
 	<body>
 		<div id="nav"></div>
@@ -16,19 +19,19 @@
 			<div class="sidebar">
 				<nav>
 					<div class="option">
-						<a href="#" class="open-nav" data="register-organization">Register organization</a>
+						<a class="open-nav" data="register-organization">Register organization</a>
 					</div>
 
 					<div class="option">
-						<a href="#" class="open-nav" data="register-individual">Register individual</a>
+						<a class="open-nav" data="register-individual">Register individual</a>
 					</div>
 
 					<div class="option">
-						<a href="#" class="open-nav" data="register-host">Register host</a>
+						<a class="open-nav" data="register-host">Register host</a>
 					</div>
 					
 					<div class="option">
-						<a href="#" class="open-nav" data="register-event">Register event</a>
+						<h2><a class="open-nav" data="register-event">Register event</a></h2>
 					</div>
 				</nav>
 			</div>
@@ -36,30 +39,42 @@
 			<div class="row register-page">
 				<div class="col-md-10 register-detail" id="register-organization">
 					<h4>Register organization</h3>
-				
+					
 					<form action="index.html" class="form-horizontal" method="post" role="form">
 						<hr/>
 						<div class="form-group">
-							<label class="col-md-4 control-label" for="Username">Име</label>
+							<label class="col-md-4 control-label" for="Address">Address</label>
 							<div class="col-md-8">
-								<input class="form-control" id="Username" name="Username" type="text" />
+								<input class="form-control" id="Address" name="Address" type="text" />
 							</div>
 						</div>
 						<div class="form-group">
-							<label class="col-md-4 control-label" for="Password">Парола</label>
+							<label class="col-md-4 control-label" for="Email">Email</label>
+							<div class="col-md-8">
+								<input class="form-control" id="Email" name="Email" type="text" />
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-md-4 control-label" for="OrganizationType">Organization type</label>
+							<div class="col-md-8">
+								<input class="form-control" id="OrganizationType" name="OrganizationType" type="text" />
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-md-4 control-label" for="Password">Password</label>
 							<div class="col-md-8">
 								<input class="form-control" id="Password" name="Password" type="password" />
 							</div>
 						</div>
 						<div class="form-group">
-							<label class="col-md-4 control-label" for="ConfirmPassword">Потвърдете паролата</label>
+							<label class="col-md-4 control-label" for="ConfirmPassword">Confirm password</label>
 							<div class="col-md-8">
 								<input class="form-control" id="ConfirmPassword" name="ConfirmPassword" type="password" />
 							</div>
 						</div>
 						<div class="form-group">
 							<div class="col-md-offset-2 col-md-10">
-								<input type="submit" value="Регистрация" class="btn btn-default" />
+								<input type="submit" value="Register" class="btn btn-default" />
 							</div>
 						</div>
 					</form>
@@ -67,30 +82,60 @@
 				
 				<div class="col-md-10 register-detail" id="register-individual" style="display: none;">
 					<h4>Register individual</h3>
-				
+					
 					<form action="index.html" class="form-horizontal" method="post" role="form">
 						<hr/>
 						<div class="form-group">
-							<label class="col-md-4 control-label" for="Username">Име</label>
+							<label class="col-md-4 control-label" for="Name">Name</label>
 							<div class="col-md-8">
-								<input class="form-control" id="Username" name="Username" type="text" />
+								<input class="form-control" id="Name" name="Name" type="text" />
 							</div>
 						</div>
 						<div class="form-group">
-							<label class="col-md-4 control-label" for="Password">Парола</label>
+							<label class="col-md-4 control-label" for="LastName">Last name</label>
+							<div class="col-md-8">
+								<input class="form-control" id="LastName" name="LastName" type="text" />
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-md-4 control-label" for="Email">Email</label>
+							<div class="col-md-8">
+								<input class="form-control" id="Email" name="Email" type="text" />
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-md-4 control-label" for="Age">Age</label>
+							<div class="col-md-8">
+								<input class="form-control" id="Age" name="Age" type="text" />
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-md-4 control-label" for="Disadvantages">Disadvantages</label>
+							<div class="col-md-8">
+								<input class="form-control" id="Disadvantages" name="Disadvantages" type="text" />
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-md-4 control-label" for="PhoneNumber">Phone number</label>
+							<div class="col-md-8">
+								<input class="form-control" id="PhoneNumber" name="PhoneNumber" type="text" />
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-md-4 control-label" for="Password">Password</label>
 							<div class="col-md-8">
 								<input class="form-control" id="Password" name="Password" type="password" />
 							</div>
 						</div>
 						<div class="form-group">
-							<label class="col-md-4 control-label" for="ConfirmPassword">Потвърдете паролата</label>
+							<label class="col-md-4 control-label" for="ConfirmPassword">Confirm Password</label>
 							<div class="col-md-8">
 								<input class="form-control" id="ConfirmPassword" name="ConfirmPassword" type="password" />
 							</div>
 						</div>
 						<div class="form-group">
 							<div class="col-md-offset-2 col-md-10">
-								<input type="submit" value="Регистрация" class="btn btn-default" />
+								<input type="submit" value="Register" class="btn btn-default" />
 							</div>
 						</div>
 					</form>
@@ -98,30 +143,77 @@
 
 				<div class="col-md-10 register-detail" id="register-host" style="display: none;">
 					<h4>Register host</h3>
-				
+
 					<form action="index.html" class="form-horizontal" method="post" role="form">
 						<hr/>
 						<div class="form-group">
-							<label class="col-md-4 control-label" for="Username">Име</label>
+							<label class="col-md-4 control-label" for="Name">Name</label>
 							<div class="col-md-8">
-								<input class="form-control" id="Username" name="Username" type="text" />
+								<input class="form-control" id="Name" name="Name" type="text" />
 							</div>
 						</div>
 						<div class="form-group">
-							<label class="col-md-4 control-label" for="Password">Парола</label>
+							<label class="col-md-4 control-label" for="Location">Location</label>
+							<div class="col-md-8">
+								<input class="form-control" id="Location" name="Location" type="text" />
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-md-4 control-label" for="MaxCapacity">Max capacity</label>
+							<div class="col-md-8">
+								<input class="form-control" id="MaxCapacity" name="MaxCapacity" type="text" />
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-md-4 control-label" for="MinPrice">Price: From-To</label>
+							<div class="row col-md-8">
+								<div class="col-md-6">
+									<input class="form-control" id="MinPrice" name="MinPrice" type="text" />
+								</div>
+								<div class="col-md-6">
+									<input class="form-control" id="MaxPrice" name="MaxPrice" type="text" />
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-md-4 control-label" for="HallCapacity">Highest hall capacity</label>
+							<div class="col-md-8">
+								<input class="form-control" id="HallCapacity" name="HallCapacity" type="text" />
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-md-4 control-label" for="Phone">Phone</label>
+							<div class="col-md-8">
+								<input class="form-control" id="Phone" name="Phone" type="text" />
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-md-4 control-label" for="Email">Email</label>
+							<div class="col-md-8">
+								<input class="form-control" id="Email" name="Email" type="text" />
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-md-4 control-label" for="Description">Description</label>
+							<div class="col-md-8">
+								<textarea class="form-control" id="Description" name="Description"></textarea>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-md-4 control-label" for="Password">Password</label>
 							<div class="col-md-8">
 								<input class="form-control" id="Password" name="Password" type="password" />
 							</div>
 						</div>
 						<div class="form-group">
-							<label class="col-md-4 control-label" for="ConfirmPassword">Потвърдете паролата</label>
+							<label class="col-md-4 control-label" for="ConfirmPassword">Confirm Password</label>
 							<div class="col-md-8">
 								<input class="form-control" id="ConfirmPassword" name="ConfirmPassword" type="password" />
 							</div>
 						</div>
 						<div class="form-group">
 							<div class="col-md-offset-2 col-md-10">
-								<input type="submit" value="Регистрация" class="btn btn-default" />
+								<input type="submit" value="Register" class="btn btn-default" />
 							</div>
 						</div>
 					</form>
@@ -129,30 +221,65 @@
 				
 				<div class="col-md-10 register-detail" id="register-event" style="display: none;">
 					<h4>Register event</h3>
+
+TODO: 
+държави, от които се търсят
+участници, град, в който ще се проведе
+събитието, такса за участие, тип на проекта,
+линк към създаден от Организатора формуляр
+за кандидатстване( два отделни линка ще са-
+един за Организации и един за Участник) и
+начална страница, която може да се създаде от
+pdf/ word файл( т.н. inforpack).
 				
 					<form action="index.html" class="form-horizontal" method="post" role="form">
 						<hr/>
 						<div class="form-group">
-							<label class="col-md-4 control-label" for="Username">Име</label>
+							<label class="col-md-6 control-label" for="ProjectName">Project name</label>
 							<div class="col-md-8">
-								<input class="form-control" id="Username" name="Username" type="text" />
+								<input class="form-control" id="ProjectName" name="ProjectName" type="text" />
 							</div>
 						</div>
 						<div class="form-group">
-							<label class="col-md-4 control-label" for="Password">Парола</label>
+							<label class="col-md-6 control-label" for="RegistrationNumber">Project registration number</label>
+							<div class="col-md-8">
+								<input class="form-control" id="RegistrationNumber" name="RegistrationNumber" type="text" />
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-md-6 control-label" for="StartDate">Duration dates</label>
+							
+							<div class="row col-md-8">
+								<div class="col-md-6 input-group date" data-provide="datepicker">
+									<input class="form-control" type="text" id="StartDate" name="StartDate" />
+									<div class="input-group-addon">
+										<i class="fa fa-3 fa-calendar"></i>
+									</div>
+								</div>
+								<div class="col-md-6 input-group date" data-provide="datepicker">
+									<input class="form-control" type="text" id="EndDate" name="EndDate" />
+									<div class="input-group-addon">
+										<i class="fa fa-3 fa-calendar"></i>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="form-group">
+							<label class="col-md-4 control-label" for="Password">Password</label>
 							<div class="col-md-8">
 								<input class="form-control" id="Password" name="Password" type="password" />
 							</div>
 						</div>
 						<div class="form-group">
-							<label class="col-md-4 control-label" for="ConfirmPassword">Потвърдете паролата</label>
+							<label class="col-md-4 control-label" for="ConfirmPassword">Confirm password</label>
 							<div class="col-md-8">
 								<input class="form-control" id="ConfirmPassword" name="ConfirmPassword" type="password" />
 							</div>
 						</div>
 						<div class="form-group">
 							<div class="col-md-offset-2 col-md-10">
-								<input type="submit" value="Регистрация" class="btn btn-default" />
+								<input type="submit" value="Register" class="btn btn-default" />
 							</div>
 						</div>
 					</form>
@@ -162,14 +289,24 @@
 		
 		<script src="scripts/jquery/jquery-3.2.1.slim.min.js"></script>
 		<script src="scripts/bootstrap/js/bootstrap.min.js"></script>
+		<script src="scripts/bootstrap/js/bootstrap-datepicker.min.js"></script>
 		<script src="scripts/common.js"></script>
 		
-		<script>		
-			$('.open-nav').click(function (){
-				var id = $(this).attr('data');
-				$('.register-detail').hide();
-				$("#" + id).show();
+		<script>
+			$(function() {
+				$('.datepicker').datepicker({
+					format: 'mm/dd/yyyy',
+					toggleActive: true
+				});
+				
+				$('.open-nav').click(function (){
+					var id = $(this).attr('data');
+					$('.register-detail').hide();
+					$("#" + id).show();
+				});
 			});
+		
+			
 		</script>
 	</body>
 </html>
