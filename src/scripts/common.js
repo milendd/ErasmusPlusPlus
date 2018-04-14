@@ -11,6 +11,13 @@
 			'<a href="index.html" class="register-button btn" id="LogoutBtn">Logout</a>';
 	}
 	
+	var message = sessionStorage.getItem("message");
+	if (message) {
+		$('#message').html(message);
+		$('#message').show();
+		sessionStorage.removeItem("message");
+	}
+	
 	var navTemplate = 
 		'<nav class="navbar navbar-expand-lg navbar-light custom-theme">' +
 			'<div class="container">' +

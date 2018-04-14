@@ -73,7 +73,15 @@ a.navbar-brand{
 
 a.open-nav {
 	display: block;
-	cursor: pointer;	
+	cursor: pointer;
+}
+
+#message {
+	background-color: green;
+	display: inline-block;
+	padding: 5px;
+	margin: 5px;
+	margin-left: 15px;
 }
 
 div.empty {

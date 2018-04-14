@@ -73,7 +73,7 @@
 						</div>
 						<div class="form-group">
 							<div class="col-md-offset-2 col-md-10">
-								<input type="submit" value="Register" class="btn btn-default" />
+								<input type="submit" value="Register" class="btn btn-default SubmitBtn" data="organization" />
 							</div>
 						</div>
 					</form>
@@ -134,7 +134,7 @@
 						</div>
 						<div class="form-group">
 							<div class="col-md-offset-2 col-md-10">
-								<input type="submit" value="Register" class="btn btn-default" />
+								<input type="submit" value="Register" class="btn btn-default SubmitBtn" data="individual" />
 							</div>
 						</div>
 					</form>
@@ -212,7 +212,7 @@
 						</div>
 						<div class="form-group">
 							<div class="col-md-offset-2 col-md-10">
-								<input type="submit" value="Register" class="btn btn-default" />
+								<input type="submit" value="Register" class="btn btn-default SubmitBtn" data="host" />
 							</div>
 						</div>
 					</form>
@@ -278,7 +278,7 @@ pdf/ word файл( т.н. inforpack).
 						</div>
 						<div class="form-group">
 							<div class="col-md-offset-2 col-md-10">
-								<input type="submit" value="Register" class="btn btn-default" />
+								<input type="submit" value="Register" class="btn btn-default SubmitBtn" data="event" />
 							</div>
 						</div>
 					</form>
@@ -302,6 +302,12 @@ pdf/ word файл( т.н. inforpack).
 					var id = $(this).attr('data');
 					$('.register-detail').hide();
 					$("#" + id).show();
+				});
+				
+				$('.SubmitBtn').click(function () {
+					var relatedRegister = $(this).attr('data');
+					var message = 'Successful registration of ' + relatedRegister;
+					sessionStorage.setItem("message", message);
 				});
 			});
 		</script>
