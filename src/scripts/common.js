@@ -22,13 +22,8 @@
 					'</ul>' +
 					
 					'<form class="form-inline my-2 my-lg-0">' +
-						// '<a href="register.html" class="btn btn-md btn-link">Register</a>' +
-						'<form action="login.html">' +
-							'<button class="login-button" type="submit">Login</button>' +
-						'</form>' +
-						'<form action="register.html">' +
-							'<button class="register-button" type="submit">Register</button>' +
-						'</form>' +
+						'<a href="login.html" class="login-button">Login</a>' +
+						'<a href="register.html" class="login-button btn">Register</a>' +
 					'</form>' +
 				'</div>' +
 			'</div>' +

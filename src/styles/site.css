@@ -1,4 +1,4 @@
-button{
+button, .login-button, .register-button {
 	display: inline-block;
 	background-color: #4181D1;
 	border: none;
@@ -46,13 +46,15 @@ body {
 	padding: 0.5rem 0px;
 }
 
-.custom-theme button{
+.login-button, 
+.register-button {
 	background-color: white;
 	color: #4181D1;
 }
 
-.custom-theme button:hover{
-	background: #003399;
+.login-button:hover, 
+.register-button:hover {
+	background-color: #003399;
 	color: #FFF;
 }
 
