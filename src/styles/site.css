@@ -46,6 +46,16 @@ body {
 	padding: 0.5rem 0px;
 }
 
+.custom-theme button{
+	background-color: white;
+	color: #4181D1;
+}
+
+.custom-theme button:hover{
+	background: #003399;
+	color: #FFF;
+}
+
 #nav nav .btn-link {
 	color: white;
 }
