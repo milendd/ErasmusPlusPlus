@@ -64,6 +64,11 @@ body {
 	color: black;
 }
 
+a.open-nav {
+	display: block;
+	cursor: pointer;	
+}
+
 div.empty {
 	height: 100px;
 }
