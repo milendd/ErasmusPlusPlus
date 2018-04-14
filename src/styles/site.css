@@ -23,6 +23,11 @@ body {
 	font-family: sans-serif;
 }
 
+.container{
+	margin:0 10%;
+	padding: 0px;
+}
+
 .page-title{
 	display: block;
 	margin: 8%;
@@ -38,6 +43,7 @@ body {
 .custom-theme {
 	background-color: #4181D1;
 	color: white;
+	padding: 0.5rem 0px;
 }
 
 #nav nav .btn-link {
