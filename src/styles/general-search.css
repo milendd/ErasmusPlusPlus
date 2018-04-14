@@ -1,0 +1,62 @@
+.sidebar .option{
+	font-size: 15px;
+}
+
+.sorting-fields{
+	margin: 10px 0;
+}
+
+.content{
+	background-color: #E9E7E8;
+	border-radius: 12px;
+	padding: 5px 10px;
+}
+
+.content-header{
+	display: block;
+	margin-bottom: 5px;
+}
+
+.content-type{
+	display: inline;
+	font-weight: bold;
+	font-size: 19px;
+}
+
+.location{
+	display: inline;
+	font-size: 14px;
+}
+
+.location:after{
+	content: ' | ';
+}
+
+.fee{
+	display: inline;
+	font-size: 14px;
+}
+
+.content-left{
+	display: inline-block;
+	float: left;
+	width: 55%;
+}
+
+.content-right{
+	display: inline-block;
+	float: right;
+	width: 40%;
+}
+
+.content-right > button{
+	width: 100%;
+}
+
+.button-to-details{
+	margin: 0 0 10px 0;
+}
+
+.info-description{
+	font-size: 11px;
+}
