@@ -36,6 +36,10 @@ a.navbar-brand{
 	padding: 0px;
 }
 
+.custom-theme .dropdown-item{
+	color:white!important;
+}
+
 .page-title{
 	display: block;
 	margin: 8%;
