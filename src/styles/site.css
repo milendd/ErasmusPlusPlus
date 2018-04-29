@@ -25,6 +25,7 @@ body {
 	background-attachment: fixed;
 	font-family: sans-serif;
 	margin-bottom: 10%;
+	min-height: 1000px;
 }
 
 a.navbar-brand{
