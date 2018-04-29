@@ -23,20 +23,35 @@
 						<a class="open-nav" data-toggle="collapse" data-target="#collapseProjectType" aria-expanded="false" aria-controls="collapseProjectType">Project type</a>
 					</div>
 					<div id="collapseProjectType" class="collapse" aria-labelledby="ProjectType">
-						<div class="card-body custom-checkbox">
-							Training Course
+						<div class="select-checkbox">
+							<div class="card-body">
+								<a>Training Course</a>
+							</div>
+							<input type="checkbox" />
 						</div>
-						<div class="card-body custom-checkbox">
-							Youth Exchange
+						<div class="select-checkbox">
+							<div class="card-body">
+								<a>Youth Exchange</a>
+							</div>
+							<input type="checkbox" />
 						</div>
-						<div class="card-body custom-checkbox">
-							Partnership Building Activity
+						<div class="select-checkbox">
+							<div class="card-body">
+								<a>Partnership Building Activity</a>
+							</div>
+							<input type="checkbox" />
 						</div>
-						<div class="card-body custom-checkbox">
-							Seminar
+						<div class="select-checkbox">
+							<div class="card-body">
+								<a>Seminar</a>
+							</div>
+							<input type="checkbox" />
 						</div>
-						<div class="card-body custom-checkbox">
-							European Voluntary Service
+						<div class="select-checkbox">
+							<div class="card-body">
+								<a>European Voluntary Service</a>
+							</div>
+							<input type="checkbox" />
 						</div>
 					</div>
 					
@@ -45,7 +60,7 @@
 					</div>
 					<div id="collapseStartingDate" class="collapse" aria-labelledby="StartingDate">
 						<div class="card-body">
-							Hi
+							*insert calendar here*
 						</div>
 					</div>
 					
@@ -53,8 +68,35 @@
 						<a class="open-nav" data-toggle="collapse" data-target="#collapseDuration" aria-expanded="false" aria-controls="collapseDuration">Duration in days</a>
 					</div>
 					<div id="collapseDuration" class="collapse" aria-labelledby="Duration">
-						<div class="card-body">
-							Hello
+						<div class="select-checkbox">
+							<div class="card-body">
+								<a>0-3 days</a>
+							</div>
+							<input type="checkbox" />
+						</div>
+						<div class="select-checkbox">
+							<div class="card-body">
+								<a>3-5 days</a>
+							</div>
+							<input type="checkbox" />
+						</div>
+						<div class="select-checkbox">
+							<div class="card-body">
+								<a>5-7 days</a>
+							</div>
+							<input type="checkbox" />
+						</div>
+						<div class="select-checkbox">
+							<div class="card-body">
+								<a>7-12 days</a>
+							</div>
+							<input type="checkbox" />
+						</div>
+						<div class="select-checkbox">
+							<div class="card-body">
+								<a>12+ days</a>
+							</div>
+							<input type="checkbox" />
 						</div>
 					</div>
 					
@@ -62,8 +104,23 @@
 						<a class="open-nav" data-toggle="collapse" data-target="#collapseOrganizer" aria-expanded="false" aria-controls="collapseOrganizer">Organizer</a>
 					</div>
 					<div id="collapseOrganizer" class="collapse" aria-labelledby="Organizer">
-						<div class="card-body">
-							Hello
+						<div class="select-checkbox">
+							<div class="card-body">
+								<a>Champions Factory</a>
+							</div>
+							<input type="checkbox" />
+						</div>
+						<div class="select-checkbox">
+							<div class="card-body">
+								<a>Bulgarian Youth Forum</a>
+							</div>
+							<input type="checkbox" />
+						</div>
+						<div class="select-checkbox">
+							<div class="card-body">
+								<a>Piem Pushim OOD</a>
+							</div>
+							<input type="checkbox" />
 						</div>
 					</div>
 					
@@ -180,7 +237,9 @@
 					</div>
 					<div id="collapseParticipationFee" class="collapse" aria-labelledby="ParticipationFee">
 						<div class="card-body">
-							Hello
+							<div class="slidecontainer">
+								<input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+							</div>
 						</div>
 					</div>
 					
@@ -189,7 +248,7 @@
 					</div>
 					<div id="collapseApplicationDeadline" class="collapse" aria-labelledby="ApplicationDeadline">
 						<div class="card-body">
-							Hello
+							*insert calendar here*
 						</div>
 					</div>
 					
@@ -197,8 +256,23 @@
 						<a class="open-nav" data-toggle="collapse" data-target="#collapseStatus" aria-expanded="false" aria-controls="collapseStatus">Status</a>
 					</div>
 					<div id="collapseStatus" class="collapse" aria-labelledby="Status">
-						<div class="card-body">
-							Hello
+						<div class="select-checkbox">
+							<div class="card-body">
+								<a>Searching for Participants</a>
+							</div>
+							<input type="checkbox" />
+						</div>
+						<div class="select-checkbox">
+							<div class="card-body">
+								<a>Searching for Partners</a>
+							</div>
+							<input type="checkbox" />
+						</div>
+						<div class="select-checkbox">
+							<div class="card-body">
+								<a>Ongoing</a>
+							</div>
+							<input type="checkbox" />
 						</div>
 					</div>
 				</nav>
@@ -221,11 +295,151 @@
 						<option value="ascending">Ascending</option>
 						<option value="descending">Descending</option>
 					</select>
-					<a class="button" href="project_search_results.html">
+					<a class="button" href="project_search.html">
 							Search
 					</a>
 				</div>
 				<div class="content">
+				<div class="content-header">
+						<div class="content-type">
+							Youth Exchange
+						</div>
+
+						<div class="dates-of-project">
+							16 April- 24 April 2018
+						</div>
+
+						<div class="location">
+							Pilismarot, Hungary
+						</div>
+
+						<div class="fee">
+							40 euro
+						</div>
+
+						<div class="status">
+							Searching for partners
+						</div>
+					</div>
+
+					<div class="content-left">
+						<h2 class="content-title">
+							Enterpreneurship Lab Action
+						</h2>
+
+						<div class="description">
+							Some enterpreneurship. We're gonna get business- tier n stuff. 	
+						</div>
+					</div>
+					
+					<div class="content-right">
+						<a class="button" href="Enterpreneurship_Lab_A2.html">
+							Project details
+						</a>
+						<div class="additional-info">
+							<div class="info-description">
+								This activity is for participants from the following countries:
+							</div>
+							<div class="info-text">
+								Bulgaria, Hungary, United Kingdom, Poland, Turkey, Bulgaria, Hungary, United Kingdom, Poland, Turkey, Bulgaria, Hungary, United Kingdom, Poland, Turkey, Bulgaria, Hungary, United Kingdom, Poland, Turkey, Bulgaria, Hungary, United Kingdom, Poland, Turkey, Bulgaria, Hungary, United Kingdom, Poland, Turkey, Bulgaria, Hungary, United Kingdom, Poland, Turkey, Bulgaria, Hungary, United Kingdom, Poland, Turkey, 
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="content">
+					<div class="content-header">
+						<div class="content-type">
+							Youth Exchange
+						</div>
+
+						<div class="dates-of-project">
+							16 April- 24 April 2018
+						</div>
+
+						<div class="location">
+							Pilismarot, Hungary
+						</div>
+
+						<div class="fee">
+							40 euro
+						</div>
+
+						<div class="status">
+							Searching for partners
+						</div>
+					</div>
+
+					<div class="content-left">
+						<h2 class="content-title">
+							Enterpreneurship Lab Action Two
+						</h2>
+
+						<div class="description">Some enterpreneurship. We're gonna get business- tier n stuff. Some enterpreneurship. We're gonna get business- tier n stuff. Some enterpreneurship. We're gonna get business- tier n stuff. Some enterpreneurship. We're gonna get business- tier n stuff. Some enterpreneurship. We're gonna get business- tier n stuff. Some enterpreneurship. We're gonna get business- tier n stuff. Some enterpreneurship. We're gonna get business- tier n stuff. Some enterpreneurship. We're gonna get business- tier n stuff. 
+						</div>
+					</div>
+					
+					<div class="content-right">
+						<a class="button" href="Enterpreneurship_Lab_A2.html">
+							Project details
+						</a>
+						<div class="additional-info">
+							<div class="info-description">
+								This activity is for participants from the following countries:
+							</div>
+							<div class="info-text">
+								Bulgaria, Hungary, United Kingdom, Poland, Turkey
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="content">
+					<div class="content-header">
+						<div class="content-type">
+							Youth Exchange
+						</div>
+
+						<div class="dates-of-project">
+							16 April- 24 April 2018
+						</div>
+
+						<div class="location">
+							Pilismarot, Hungary
+						</div>
+
+						<div class="fee">
+							40 euro
+						</div>
+
+						<div class="status">
+							Searching for partners
+						</div>
+					</div>
+
+					<div class="content-left">
+						<h2 class="content-title">
+							Enterpreneurship Lab
+						</h2>
+
+						<div class="description">
+							Some enterpreneurship. We're gonna get business- tier n stuff. Some enterpreneurship. We're gonna get business- tier n stuff. Some enterpreneurship. We're gonna get business- tier n stuff. Some enterpreneurship. We're gonna get business- tier n stuff. Some enterpreneurship. We're gonna get business- tier n stuff. Some enterpreneurship. We're gonna get business- tier n stuff. Some enterpreneurship. We're gonna get business- tier n stuff. Some enterpreneurship. We're gonna get business- tier n stuff. Some enterpreneurship. We're gonna get business- tier n stuff. Some enterpreneurship. We're gonna get business- tier n stuff. Some enterpreneurship. We're gonna get business- tier n stuff. 
+						</div>
+					</div>
+					
+					<div class="content-right">
+						<a class="button" href="Enterpreneurship_Lab_A2.html">
+							Project details
+						</a>
+						<div class="additional-info">
+							<div class="info-description">
+								This activity is for participants from the following countries:
+							</div>
+							<div class="info-text">
+								Bulgaria, Hungary, United Kingdom, Poland, Turkey
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

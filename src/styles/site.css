@@ -144,6 +144,7 @@ div.empty {
 	display: block;
 	padding: 0.3em;
 	cursor: pointer;
+	background: #EEE;
 }
 
 .accordion .card-body:hover {
