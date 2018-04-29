@@ -134,19 +134,24 @@ div.empty {
 	display: block;
 }
 
-.option:hover, #selected{
+.option:hover, #selected {
 	background: #003399;
 	color: #FFF;
 }
 
-/*.option + .option,
-.card-body{
-	margin-top:3px;
-}*/
-
-.card-body{
+.card-body {
 	display: block;
 	padding: 0.3em;
+	cursor: pointer;
+}
+
+.accordion .card-body:hover {
+	background: #02257b;
+	color: white;
+}
+
+.accordion:hover {
+	background: #E9E7E8;
 }
 
 .contents-field {
