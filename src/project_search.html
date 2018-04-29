@@ -86,14 +86,23 @@
 									<a class="open-nav" data-toggle="collapse" data-target="#collapseBulgariaDetails" aria-expanded="false" aria-controls="collapseBulgariaDetails">Bulgaria</a>
 								</div>
 								<div id="collapseBulgariaDetails" class="collapse" aria-labelledby="BulgariaDetails">
-									<div class="card-body">
-										<a>Sofia</a>
+									<div class="select-checkbox">
+										<div class="card-body">
+											<a>Sofia</a>
+										</div>
+										<input type="checkbox" />
 									</div>
-									<div class="card-body">
-										<a>Bansko</a>
+									<div class="select-checkbox">
+										<div class="card-body">
+											<a>Bansko</a>
+										</div>
+										<input type="checkbox" />
 									</div>
-									<div class="card-body">
-										<a>Varna</a>
+									<div class="select-checkbox">
+										<div class="card-body">
+											<a>Varna</a>
+										</div>
+										<input type="checkbox" />
 									</div>
 								</div>
 								
@@ -101,14 +110,23 @@
 									<a class="open-nav" data-toggle="collapse" data-target="#collapseSpainDetails" aria-expanded="false" aria-controls="collapseSpainDetails">Spain</a>
 								</div>
 								<div id="collapseSpainDetails" class="collapse" aria-labelledby="SpainDetails">
-									<div class="card-body">
-										<a>Mardid</a>
+									<div class="select-checkbox">
+										<div class="card-body">
+											<a>Madrid</a>
+										</div>
+										<input type="checkbox" />
 									</div>
-									<div class="card-body">
-										<a>Barcelona</a>
+									<div class="select-checkbox">
+										<div class="card-body">
+											<a>Barcelona</a>
+										</div>
+										<input type="checkbox" />
 									</div>
-									<div class="card-body">
-										<a>Leon</a>
+									<div class="select-checkbox">
+										<div class="card-body">
+											<a>Leon</a>
+										</div>
+										<input type="checkbox" />
 									</div>
 								</div>
 
@@ -116,14 +134,23 @@
 									<a class="open-nav" data-toggle="collapse" data-target="#collapseHungaryDetails" aria-expanded="false" aria-controls="collapseHungaryDetails">Hungary</a>
 								</div>
 								<div id="collapseHungaryDetails" class="collapse" aria-labelledby="HungaryDetails">
-									<div class="card-body">
-										<a>Budapest</a>
+									<div class="select-checkbox">
+										<div class="card-body">
+											<a>Budapest</a>
+										</div>
+										<input type="checkbox" />
 									</div>
-									<div class="card-body">
-										<a>Pilismarot</a>
+									<div class="select-checkbox">
+										<div class="card-body">
+											<a>Pilismarot</a>
+										</div>
+										<input type="checkbox" />
 									</div>
-									<div class="card-body">
-										<a>Balaton</a>
+									<div class="select-checkbox">
+										<div class="card-body">
+											<a>Balaton</a>
+										</div>
+										<input type="checkbox" />
 									</div>
 								</div>
 							</div>
@@ -328,5 +355,21 @@
 		<script src="scripts/jquery/jquery-3.2.1.slim.min.js"></script>
 		<script src="scripts/bootstrap/js/bootstrap.min.js"></script>
 		<script src="scripts/common.js"></script>
+		
+		<script>
+			$(function() {
+				$('.accordion .card-body').click(function (e) {
+					var checkbox = $(this).siblings('input[type="checkbox"]');
+					var isChecked = checkbox.prop('checked');
+
+					if (isChecked) {
+						checkbox.prop('checked', false);
+					}
+					else {
+						checkbox.prop('checked', true);
+					}
+				});
+			});
+		</script>
 	</body>
 </html>
