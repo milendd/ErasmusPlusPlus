@@ -13,7 +13,7 @@
 	float: right;
 }
 
-.accordion input[type="checkbox"] {
+#accordion input[type="checkbox"] {
 	transform: scale(1.3);
 	margin: 5px;
 	position: absolute;
@@ -21,6 +21,10 @@
 	top: 5px;
 }
 
-.accordion .select-checkbox {
+#accordion .option {
+	position: relative;
+}
+
+#accordion .select-checkbox {
 	position: relative;
 }
