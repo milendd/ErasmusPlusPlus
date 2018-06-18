@@ -1,14 +1,14 @@
 (function () {	
 	var userTemplate = 
-		'<a href="login.html" class="register-button">Login</a>' +
-		'<a href="register.html" class="register-button btn">Register</a>';
+		'<a href="javascript:navigate(\'login.html\')" class="register-button">Login</a>' +
+		'<a href="javascript:navigate(\'register.html\')" class="register-button btn">Register</a>';
 
 	var user = sessionStorage.getItem("user");
 	if (user) {
 		userTemplate = 
 			'<span class="greating">Здравейте <b>' + user +'</b></span>' +
-			'<a href="profile.html" class="register-button btn">Profile</a>' +
-			'<a href="index.html" class="register-button btn" id="LogoutBtn">Logout</a>';
+			'<a href="javascript:navigate(\'profile.html\')" class="register-button btn">Profile</a>' +
+			'<a href="javascript:navigate(\'index.html\')" class="register-button btn" id="LogoutBtn">Logout</a>';
 	}
 	
 	var message = sessionStorage.getItem("message");
@@ -22,7 +22,7 @@
 	var navTemplate = 
 		'<nav class="navbar navbar-expand-lg navbar-light custom-theme">' +
 			'<div class="container">' +
-				'<a class="navbar-brand" href="index.html">Erasmus++</a>' +
+				'<a class="navbar-brand" href="javascript:navigate(\'index.html\')">Erasmus++</a>' +
 				'<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">' +
 					'<span class="navbar-toggler-icon"></span>' +
 				'</button>' +
@@ -34,9 +34,9 @@
 								'Search' +
 							'</a>' +
 							'<div class="dropdown-menu custom-theme" aria-labelledby="navbarDropdown">' +
-								'<a class="dropdown-item" href="organization_search.html">By organization</a>' +
-								'<a class="dropdown-item" href="host_search.html">By host</a>' +
-								'<a class="dropdown-item" href="project_search.html">By project</a>' +
+								'<a class="dropdown-item" href="javascript:navigate(\'organization_search.html\')">By organization</a>' +
+								'<a class="dropdown-item" href="javascript:navigate(\'host_search.html\')">By host</a>' +
+								'<a class="dropdown-item" href="javascript:navigate(\'project_search.html\')">By project</a>' +
 							'</div>' +
 						'</li>' +
 					'</ul>' +
@@ -51,3 +51,18 @@
 		sessionStorage.removeItem('user');	
 	});
 }());
+
+var navigate = function (address) {
+    var link = window.location.href;
+    var search = 'src';
+    var idx = link.indexOf(search) + search.length + 1;
+	var baseAddress = link.substr(0, idx);
+	
+	window.location = baseAddress + address;
+};
+
+var navigateForm = function (btn) {
+	var form = btn.closest("form");
+	var action = form.attr('action');
+	navigate(action);
+}
