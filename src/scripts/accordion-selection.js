@@ -46,16 +46,13 @@ $(function() {
 });
 
 $(function() {
-	$('#select-all').click(function() {
+	$('.select-all').click(function() {
 		$(this).siblings().find('input[type=checkbox]').prop('checked', true);
-		//$(this).siblings().find('select-checkbox').find('input[type=checkbox]').prop('checked', true);
-		alert("woo");
 	});
 });
 
 $(function() {
-	$('#deselect-all').click(function() {
+	$('.deselect-all').click(function() {
 		$(this).siblings().find('input[type=checkbox]').prop('checked', false);
-		alert("shoo");
 	});
 });
