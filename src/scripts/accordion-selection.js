@@ -49,6 +49,7 @@ $(function() {
 	$('#select-all').click(function() {
 		$(this).siblings().find('input[type=checkbox]').prop('checked', true);
 		//$(this).siblings().find('select-checkbox').find('input[type=checkbox]').prop('checked', true);
+		alert("woo");
 	});
 });
 
