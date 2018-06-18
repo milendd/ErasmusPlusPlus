@@ -86,11 +86,18 @@ a.open-nav {
 }
 
 #message {
-	background-color: green;
-	display: inline-block;
+	margin: 10px auto;
+    display: block;
+    width: 400px;
 	padding: 5px;
-	margin: 5px;
-	margin-left: 15px;
+}
+
+.msg-success {
+	background-color: green;
+}
+
+.msg-error {
+	background-color: red;
 }
 
 div.empty {

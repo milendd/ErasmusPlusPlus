@@ -14,6 +14,7 @@
 	var message = sessionStorage.getItem("message");
 	if (message) {
 		$('#message').html(message);
+		$('#message').addClass('msg-success');
 		$('#message').show();
 		sessionStorage.removeItem("message");
 	}
