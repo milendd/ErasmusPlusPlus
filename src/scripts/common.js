@@ -66,3 +66,29 @@ var navigateForm = function (btn) {
 	var action = form.attr('action');
 	navigate(action);
 }
+
+var getDataForm = function (form) {
+	var data = form.serializeArray();
+	var obj = {};
+	for (var i = 0; i < data.length; i++) {
+		obj[data[i].name] = data[i].value;
+	}
+
+	return obj;
+}
+
+var getObjFromStorage = function (key) {
+	var data = sessionStorage.getItem(key);
+	if (data == null) {
+		data = [];
+	}
+	else {
+		data = JSON.parse(data);
+	}
+
+	return data;
+}
+
+var setObjToStorage = function (key, value) {
+	sessionStorage.setItem(key, JSON.stringify(value));
+}

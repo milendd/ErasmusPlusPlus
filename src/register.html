@@ -11,6 +11,7 @@
 	</head>
 	<body>
 		<div id="nav"></div>
+		<div id="message" style="display: none"></div>
 
 		<div class="container">
 			<h1 class="page-title">Registration hub</h1>
@@ -310,7 +311,15 @@
 				$('.SubmitBtn').click(function () {
 					var relatedRegister = $(this).attr('data');
 					var message = 'Successful registration of ' + relatedRegister;
-					sessionStorage.setItem("message", message);
+					sessionStorage.setItem('message', message);
+
+					var allUsers = getObjFromStorage('allUsers');
+
+					var form = $(this).closest('form');
+					var obj = getDataForm(form);
+					obj.RegType = relatedRegister;
+					allUsers.push(obj);
+					setObjToStorage('allUsers', allUsers);
 
 					navigateForm($(this));
 				});

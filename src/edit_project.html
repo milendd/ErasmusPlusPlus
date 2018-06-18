@@ -10,6 +10,7 @@
 	</head>
 	<body>
 		<div id="nav"></div>
+		<div id="message" style="display: none"></div>
 
 		<div class="container">
 			<h1 class="page-title">Project edit</h1>
@@ -22,7 +23,7 @@
 				<div class="col-md-10 register-detail">
 					<h4>Edit project</h3>
 				
-					<form action="index.html" class="form-horizontal" method="post" role="form">
+					<form action="Enterpreneurship_Lab_A2.html" class="form-horizontal" method="post" role="form">
 						<hr/>
 						<div class="form-group">
 							<label class="col-md-6 control-label" for="ProjectName">Project name</label>
@@ -67,11 +68,18 @@
 		
 		<script src="scripts/jquery/jquery-3.2.1.slim.min.js"></script>
 		<script src="scripts/bootstrap/js/bootstrap.min.js"></script>
+		<script src="scripts/bootstrap/js/bootstrap-datepicker.min.js"></script>
 		<script src="scripts/common.js"></script>
 
 		<script>
 			$(function() {
-				$('.SubmitBtn').click(function (e){					
+				$('.datepicker').datepicker({
+					format: 'mm/dd/yyyy',
+					toggleActive: true
+				});
+
+				$('.SubmitBtn').click(function (e) {
+					sessionStorage.setItem('message', 'Successful edit of the project');
 					navigateForm($(this));
 				});
 			});

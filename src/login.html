@@ -9,6 +9,7 @@
 	</head>
 	<body>
 		<div id="nav"></div>
+		<div id="message" style="display: none"></div>
 		
 		<div class="container">
 			<h1 class="page-title">Login hub</h1>
@@ -51,11 +52,8 @@
 		<script>
 			$(function() {
 				$('#SubmitBtn').click(function (e){
-					var data = $('#LoginForm').serializeArray();
-					var obj = {};
-					for (var i = 0; i < data.length; i++) {
-						obj[data[i].name] = data[i].value;
-					}
+					var form = $('#LoginForm');
+					var obj = getDataForm(form);
 					
 					// Just for the prototype
 					sessionStorage.setItem("user", obj.Email);
