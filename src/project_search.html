@@ -60,7 +60,12 @@
 					</div>
 					<div id="collapseStartingDate" class="collapse" aria-labelledby="StartingDate">
 						<div class="card-body">
-							*insert calendar here*
+							<div class="col-md-6 input-group date" data-provide="datepicker">
+								<input class="form-control" type="text" id="StartDate" name="StartDate" />
+								<div class="input-group-addon">
+									<i class="fa fa-3 fa-calendar"></i>
+								</div>
+							</div>
 						</div>
 					</div>
 					
@@ -279,7 +284,12 @@
 					</div>
 					<div id="collapseApplicationDeadline" class="collapse" aria-labelledby="ApplicationDeadline">
 						<div class="card-body">
-							*insert calendar here*
+							<div class="col-md-6 input-group date" data-provide="datepicker">
+								<input class="form-control" type="text" id="EndDate" name="EndDate" />
+								<div class="input-group-addon">
+									<i class="fa fa-3 fa-calendar"></i>
+								</div>
+							</div>
 						</div>
 					</div>
 					
@@ -480,5 +490,26 @@
 		<script src="scripts/common.js"></script>
 		<script src="scripts/accordion-selection.js"></script>
 		<script src="scripts/slider-value-display.js"></script>
+		<script src="scripts/bootstrap/js/bootstrap-datepicker.min.js"></script>
+		<script>
+			$(function() {
+				$('.datepicker').datepicker({
+					format: 'mm/dd/yyyy',
+					toggleActive: true
+				});
+				
+				$('.open-nav').click(function (){
+					var id = $(this).attr('data');
+					$('.register-detail').hide();
+					$("#" + id).show();
+				});
+				
+				$('.SubmitBtn').click(function () {
+					var relatedRegister = $(this).attr('data');
+					var message = 'Successful registration of ' + relatedRegister;
+					sessionStorage.setItem("message", message);
+				});
+			});
+		</script>
 	</body>
 </html>
