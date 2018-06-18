@@ -28,7 +28,7 @@ $(function() {
 		var selector = $(this).parent();
 		var selectedCheckboxes = selector.find('input[type=checkbox]:checked');
 		
-		var allSelector = selector.attr('aria-labelledby');					
+		var allSelector = selector.attr('aria-labelledby');
 		var selectAllCheckbox = $('#' + allSelector).find('input[type="checkbox"]')
 
 		if (selectedCheckboxes.length === 0) {
@@ -56,5 +56,6 @@ $(function() {
 $(function() {
 	$('#deselect-all').click(function() {
 		$(this).siblings().find('input[type=checkbox]').prop('checked', false);
+		alert("shoo");
 	});
 });
