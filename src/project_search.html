@@ -319,7 +319,7 @@
 					</div>
 				</nav>
 			</div>
-			<div class="contents-field">
+			<div class="contents-field" id="component">
 				<div class="sorting-fields">
 					 <select class="sort-by-tag">
 					 	<option value="name">Name</option>
@@ -341,148 +341,35 @@
 							Search
 					</a>
 				</div>
-				<div class="content">
-				<div class="content-header">
-						<div class="content-type">
-							Youth Exchange
-						</div>
 
-						<div class="dates-of-project">
-							16 April- 24 April 2018
-						</div>
-
-						<div class="location">
-							Pilismarot, Hungary
-						</div>
-
-						<div class="fee">
-							40 euro
-						</div>
-
-						<div class="status">
-							Searching for partners
-						</div>
-					</div>
-
-					<div class="content-left">
-						<h2 class="content-title">
-							Enterpreneurship Lab Action
-						</h2>
-
-						<div class="description">
-							Some enterpreneurship. We're gonna get business- tier n stuff. 	
-						</div>
-					</div>
-					
-					<div class="content-right">
-						<a class="button" href="javascript:navigate('Enterpreneurship_Lab_A2.html')">
-							Project details
-						</a>
-						<div class="additional-info">
-							<div class="info-description">
-								This activity is for participants from the following countries:
-							</div>
-							<div class="info-text">
-								Bulgaria, Hungary, United Kingdom, Poland, Turkey, Bulgaria, Hungary, United Kingdom, Poland, Turkey, Bulgaria, Hungary, United Kingdom, Poland, Turkey, Bulgaria, Hungary, United Kingdom, Poland, Turkey, Bulgaria, Hungary, United Kingdom, Poland, Turkey, Bulgaria, Hungary, United Kingdom, Poland, Turkey, Bulgaria, Hungary, United Kingdom, Poland, Turkey, Bulgaria, Hungary, United Kingdom, Poland, Turkey, 
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="content">
+				<div v-for="element in elements" class="content">
+					{{ element.text }}
 					<div class="content-header">
-						<div class="content-type">
-							Youth Exchange
-						</div>
-
-						<div class="dates-of-project">
-							16 April- 24 April 2018
-						</div>
-
-						<div class="location">
-							Pilismarot, Hungary
-						</div>
-
-						<div class="fee">
-							40 euro
-						</div>
-
-						<div class="status">
-							Searching for partners
-						</div>
+						<div class="content-type">{{element.headerContent}}</div>
+						<div class="dates-of-project">{{element.headerDates}}</div>
+						<div class="location">{{element.headerLocation}}</div>
+						<div class="fee">{{element.headerFee}}</div>
+						<div class="status">{{element.headerStatus}}</div>
 					</div>
 
 					<div class="content-left">
-						<h2 class="content-title">
-							Enterpreneurship Lab Action Two
-						</h2>
-
-						<div class="description">Some enterpreneurship. We're gonna get business- tier n stuff. Some enterpreneurship. We're gonna get business- tier n stuff. Some enterpreneurship. We're gonna get business- tier n stuff. Some enterpreneurship. We're gonna get business- tier n stuff. Some enterpreneurship. We're gonna get business- tier n stuff. Some enterpreneurship. We're gonna get business- tier n stuff. Some enterpreneurship. We're gonna get business- tier n stuff. Some enterpreneurship. We're gonna get business- tier n stuff. 
-						</div>
+						<h2 class="content-title">{{element.leftTitle}}</h2>
+						<div class="description">{{element.leftDesc}}</div>
 					</div>
-					
+						
 					<div class="content-right">
 						<a class="button" href="javascript:navigate('Enterpreneurship_Lab_A2.html')">
 							Project details
 						</a>
 						<div class="additional-info">
-							<div class="info-description">
-								This activity is for participants from the following countries:
-							</div>
+							<div class="info-description">{{element.rightDesc}}</div>
 							<div class="info-text">
-								Bulgaria, Hungary, United Kingdom, Poland, Turkey
+								{{element.rightText}}
 							</div>
 						</div>
 					</div>
 				</div>
 
-				<div class="content">
-					<div class="content-header">
-						<div class="content-type">
-							Youth Exchange
-						</div>
-
-						<div class="dates-of-project">
-							16 April- 24 April 2018
-						</div>
-
-						<div class="location">
-							Pilismarot, Hungary
-						</div>
-
-						<div class="fee">
-							40 euro
-						</div>
-
-						<div class="status">
-							Searching for partners
-						</div>
-					</div>
-
-					<div class="content-left">
-						<h2 class="content-title">
-							Enterpreneurship Lab
-						</h2>
-
-						<div class="description">
-							Some enterpreneurship. We're gonna get business- tier n stuff. Some enterpreneurship. We're gonna get business- tier n stuff. Some enterpreneurship. We're gonna get business- tier n stuff. Some enterpreneurship. We're gonna get business- tier n stuff. Some enterpreneurship. We're gonna get business- tier n stuff. Some enterpreneurship. We're gonna get business- tier n stuff. Some enterpreneurship. We're gonna get business- tier n stuff. Some enterpreneurship. We're gonna get business- tier n stuff. Some enterpreneurship. We're gonna get business- tier n stuff. Some enterpreneurship. We're gonna get business- tier n stuff. Some enterpreneurship. We're gonna get business- tier n stuff. 
-						</div>
-					</div>
-					
-					<div class="content-right">
-						<a class="button" href="javascript:navigate('Enterpreneurship_Lab_A2.html')">
-							Project details
-						</a>
-						<div class="additional-info">
-							<div class="info-description">
-								This activity is for participants from the following countries:
-							</div>
-							<div class="info-text">
-								Bulgaria, Hungary, United Kingdom, Poland, Turkey
-							</div>
-						</div>
-					</div>
-				</div>
 			</div>
 		</div>
 		
@@ -492,6 +379,8 @@
 		<script src="scripts/accordion-selection.js"></script>
 		<script src="scripts/slider-value-display.js"></script>
 		<script src="scripts/bootstrap/js/bootstrap-datepicker.min.js"></script>
+		<script src="scripts/vue.min.js"></script>
+
 		<script>
 			$(function() {
 				$('.datepicker').datepicker({
@@ -511,6 +400,46 @@
 					sessionStorage.setItem("message", message);
 				});
 			});
+		</script>
+
+		<script>
+			var f1 = new Vue({ el: '#component', data: {
+				elements: [
+					{ 
+						headerContent: 'Youth Exchange',
+						headerDates: '16 April- 24 April 2018',
+						headerLocation: 'Pilismarot, Hungary',
+						headerFee: '40 euro',
+						headerStatus: 'Searching for partners',
+						leftTitle: 'Enterpreneurship Lab Action',
+						leftDesc: "Some enterpreneurship. We're gonna get business- tier n stuff.",
+						rightDesc: 'This activity is for participants from the following countries:',
+						rightText: 'Poland, Turkey, Bulgaria, Hungary, United Kingdom, Poland, Turkey, Bulgaria, Poland, Turkey',
+					},
+					{ 
+						headerContent: 'Youth Exchange 2',
+						headerDates: '16 April- 24 April 2019',
+						headerLocation: 'Pilismarot, Hungary',
+						headerFee: '50 euro',
+						headerStatus: 'Searching for partners',
+						leftTitle: 'Enterpreneurship Lab Action Two',
+						leftDesc: "Some enterpreneurship. We're gonna get business- tier n stuff. Some enterpreneurship. We're gonna get business- tier n stuff. Some enterpreneurship. We're gonna get business- tier n stuff. Some enterpreneurship. We're gonna get business- tier n stuff. Some enterpreneurship. We're gonna get business- tier n stuff. Some enterpreneurship. We're gonna get business- tier n stuff.Some enterpreneurship. We're gonna get business- tier n stuff. Some enterpreneurship. We're gonna get business- tier n stuff. Some enterpreneurship. We're gonna get business- tier n stuff. Some enterpreneurship. We're gonna get business- tier n stuff.",
+						rightDesc: 'This activity is for participants from the following countries:',
+						rightText: 'Poland, Turkey, Bulgaria, Hungary, United Kingdom, Poland, Turkey, ',
+					},
+					{ 
+						headerContent: 'Youth Exchange 3',
+						headerDates: '16 April- 24 April 2020',
+						headerLocation: 'Sofia, Bulgaria',
+						headerFee: '90 euro',
+						headerStatus: 'Searching for partners',
+						leftTitle: 'Hello Lab Action',
+						leftDesc: "Some enterpreneurship. We're gonna get business- tier n stuff. Some enterpreneurship. We're gonna get business- tier n stuff. Some enterpreneurship. We're gonna get business- tier n stuff. Some enterpreneurship. We're gonna get business- tier n stuff. Some enterpreneurship. We're gonna get business- tier n stuff. Some enterpreneurship. We're gonna get business- tier n stuff.Some enterpreneurship. We're gonna get business- tier n stuff. Some enterpreneurship. We're gonna get business- tier n stuff. Some enterpreneurship. We're gonna get business- tier n stuff. Some enterpreneurship. We're gonna get business- tier n stuff.",
+						rightDesc: 'This activity is for participants from the following countries:',
+						rightText: 'Poland, Turkey, Bulgaria',
+					},
+				]
+			} });
 		</script>
 	</body>
 </html>
