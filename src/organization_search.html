@@ -7,6 +7,11 @@
 		<link rel="stylesheet" href="styles/site.css">
 		<link rel="stylesheet" href="styles/general-search.css">
 		<link rel="stylesheet" href="styles/organization-search.css">
+		
+		<script src="scripts/jquery/jquery-3.2.1.slim.min.js"></script>
+		<script src="scripts/bootstrap/js/bootstrap.min.js"></script>
+		<script src="scripts/common.js"></script>
+		<script src="scripts/accordion-selection.js"></script>
 	</head>
 
 	<body>
@@ -19,17 +24,82 @@
 		<div class="central-section">
 			<div class="sidebar">
 				<nav>
-					<div class="option">
-						<a href="#">Country</a>
+					<div id="Countries" class="option">							
+						<a class="open-nav" data-toggle="collapse" data-target="#collapseCountries" aria-expanded="false" aria-controls="collapseCountries">Countries</a>
+					</div>
+					<div id="collapseCountries" class="collapse" aria-labelledby="Countries">
+						<div class="select-checkbox" id="select-all">
+							<div class="card-body">
+								<a>Select all</a>
+							</div>
+						</div>
+						<div class="select-checkbox" id="deselect-all">
+							<div class="card-body">
+								<a>Deselect all</a>
+							</div>
+						</div>
+						<div class="select-checkbox">
+							<div class="card-body">
+								<a>Bulgaria</a>
+							</div>
+							<input type="checkbox" />
+						</div>
+						<div class="select-checkbox">
+							<div class="card-body">
+								<a>Spain</a>
+							</div>
+							<input type="checkbox" />
+						</div>
+						<div class="select-checkbox">
+							<div class="card-body">
+								<a>Hungary</a>
+							</div>
+							<input type="checkbox" />
+						</div>
 					</div>
 
-					<div class="option">
-						<a href="#">Topics of focus</a>
+					<div id="topics-of-focus" class="option">							
+						<a class="open-nav" data-toggle="collapse" data-target="#collapseTopicsOfFocus" aria-expanded="false" aria-controls="collapseTopicsOfFocus">Topics Of Focus</a>
+					</div>
+					<div id="collapseTopicsOfFocus" class="collapse" aria-labelledby="TopicsOfFocus">
+						<div class="select-checkbox">
+							<div class="card-body">
+								<a>Sports</a>
+							</div>
+							<input type="checkbox" />
+						</div>
+						<div class="select-checkbox">
+							<div class="card-body">
+								<a>Storytellnig</a>
+							</div>
+							<input type="checkbox" />
+						</div>
+						<div class="select-checkbox">
+							<div class="card-body">
+								<a>Cultural Heritage</a>
+							</div>
+							<input type="checkbox" />
+						</div>
 					</div>
 
-					<div class="option">
-						<a href="#">Type of organization</a>
+					<div id="organization-type" class="option">							
+						<a class="open-nav" data-toggle="collapse" data-target="#collapseType" aria-expanded="false" aria-controls="collapseType">Organization Type</a>
 					</div>
+					<div id="collapseType" class="collapse" aria-labelledby="Type">
+						<div class="select-checkbox">
+							<div class="card-body">
+								<a>NGO</a>
+							</div>
+							<input type="checkbox" />
+						</div>
+						<div class="select-checkbox">
+							<div class="card-body">
+								<a>Governmental</a>
+							</div>
+							<input type="checkbox" />
+						</div>
+					</div>
+
 				</nav>
 			</div>
 			<div class="contents-field">
@@ -155,9 +225,5 @@
 				</div>
 			</div>
 		</div>
-		
-		<script src="scripts/jquery/jquery-3.2.1.slim.min.js"></script>
-		<script src="scripts/bootstrap/js/bootstrap.min.js"></script>
-		<script src="scripts/common.js"></script>
 	</body>
 </html>
